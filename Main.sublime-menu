@@ -1,0 +1,41 @@
+[
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "id": "package-settings",
+                "mnemonic": "P",
+                "children":
+                [
+                    {
+                        "caption": "AutomaticFormatter",
+                        "id": "AutomaticFormatter-settings",
+                        "children":
+                        [
+                            {
+                                "caption": "Settings",
+                                "command": "edit_settings", "args":
+                                {
+                                    "base_file": "${packages}/AutomaticFormatter/AutomaticFormatter.sublime-settings",
+                                    "default": "// AutomaticFormatter Settings - User\n{\n\t$0\n}\n"
+                                },
+                            },
+                            {
+                                "caption": "Key Bindings",
+                                "command": "edit_settings", "args":
+                                {
+                                    "base_file": "${packages}/AutomaticFormatter/Default ($platform).sublime-keymap",
+                                    "default": "${packages}/User/Default ($platform).sublime-keymap"
+                                },
+                            },
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
