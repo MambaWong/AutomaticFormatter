@@ -15,6 +15,7 @@ command_line_options = None
 SYNTAX_MODE = {
     'C': 'C',
     'C++': 'C',
+    "C++ (Header)": "C",
     'OBJC': 'C',
     'OBJC++': 'C',
     'OPENCL': 'C',
@@ -37,7 +38,7 @@ def load_settings():
 
     syntax_mode = SYNTAX_MODE.copy()
     syntax_mode.update(settings.get('user_defined_syntax_mode_mapping', {}))
-    syntax_mode = {syntax.upper(): mode.upper() for syntax, mode in syntax_mode.items()}
+    # syntax_mode = {syntax.upper(): mode.upper() for syntax, mode in syntax_mode.items()}
 
     default_option_file = settings.get("default_option_file", None)
     project_option_file = settings.get("project_option_file", None)
